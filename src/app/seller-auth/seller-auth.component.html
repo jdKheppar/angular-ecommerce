@@ -1,1 +1,57 @@
-<p>seller-auth works!</p>
+<!-- In the below code, we have used template-driven approach to mange the overall form rather than two way data binding as we do with ngModel -->
+
+
+<div class="seller-auth">
+  <div *ngIf="!showLogin" class="sign-up">
+    <h1>Seller sign-up</h1>
+    <form #sellerSignUp="ngForm" (ngSubmit)="signUp(sellerSignUp.value)" class="common-form">
+      <input
+        type="text"
+        class="form-input"
+        placeholder="Enter Name"
+        name="name"
+        ngModel
+      />
+      <input
+        type="password"
+        class="form-input"
+        placeholder="Enter Password"
+        name="password"
+        ngModel
+      />
+      <input
+        type="text"
+        class="form-input"
+        placeholder="Enter Email"
+        name="email"
+        ngModel
+      />
+      <button class="form-button">Sign Up</button>
+      <a (click)="toggleLogin()" style="marginTop: 20px;">Already Have A Account? Click to Login</a>
+    </form>
+  </div>
+  <div *ngIf="showLogin" class="sign-up">
+    <h1>Seller log-in</h1>
+    <p>{{authError}}</p>
+    <form #sellerLogIn="ngForm" (ngSubmit)="logIn(sellerLogIn.value)" class="common-form">
+        <input
+        type="text"
+        class="form-input"
+        placeholder="Enter Email"
+        name="email"
+        ngModel
+      />
+      <input
+        type="password"
+        class="form-input"
+        placeholder="Enter Password"
+        name="password"
+        ngModel
+      />
+      
+      <button class="form-button">Log In</button>
+      <a (click)="toggleLogin()" style="marginTop: 20px;">Don't Have A Account? Click to SignUp</a>
+
+    </form>
+  </div>
+</div>
