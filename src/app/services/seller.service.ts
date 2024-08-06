@@ -34,7 +34,7 @@ export class SellerService {
       
       if( result && result.length){//we are able to get the result.length because of data type any
         
-        localStorage.setItem('seller',JSON.stringify(result.body))
+        localStorage.setItem('seller',JSON.stringify(result))
         this.router.navigate(['seller-home']);
       }
       else{

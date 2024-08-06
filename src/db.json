@@ -209,5 +209,16 @@
       "email": "mikyjo@mailinator.com",
       "password": "Pa$$w0rd!"
     }
+  ],
+  "products": [
+    {
+      "id": "3283",
+      "name": "Sigourney Woodard",
+      "price": "920",
+      "category": "A soluta cum ut exce",
+      "color": "Sit consequuntur vol",
+      "description": "Unde facilis omnis v",
+      "image": "Quos dolores ullamco"
+    }
   ]
 }
