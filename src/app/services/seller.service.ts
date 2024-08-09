@@ -16,8 +16,9 @@ export class SellerService {
       if(result){
         console.log("User Signed Up", result);
         this.isSellerLoggedIn.next(true);
-        localStorage.setItem('seller',JSON.stringify(result.body))
-        this.router.navigate(['seller-home']);
+        //localStorage.setItem('seller',JSON.stringify(result.body))
+        //this.router.navigate(['seller-home']);
+        
       }
       
     }

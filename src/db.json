@@ -208,17 +208,83 @@
       "id": "10cf",
       "email": "mikyjo@mailinator.com",
       "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "a641",
+      "name": "",
+      "password": "",
+      "email": ""
+    },
+    {
+      "id": "2245",
+      "name": "",
+      "password": "",
+      "email": ""
+    },
+    {
+      "id": "1bfa",
+      "name": "",
+      "password": "",
+      "email": ""
+    },
+    {
+      "id": "c242",
+      "name": "",
+      "password": "",
+      "email": ""
+    },
+    {
+      "id": "8247",
+      "name": "Cheryl Mckenzie",
+      "password": "Pa$$w0rd!",
+      "email": "wunymonoso@mailinator.com"
     }
   ],
   "products": [
     {
-      "id": "3283",
-      "name": "Sigourney Woodard",
-      "price": "920",
-      "category": "A soluta cum ut exce",
-      "color": "Sit consequuntur vol",
-      "description": "Unde facilis omnis v",
-      "image": "Quos dolores ullamco"
+      "name": "Murali Dharan",
+      "price": "360",
+      "category": "Quisquam ut non aspe",
+      "color": "Consequatur consecte",
+      "description": "Expedita officia sus",
+      "image": "https://picsum.photos/id/237/200/300",
+      "id": "1421"
+    },
+    {
+      "id": "e000",
+      "name": "Yvette Grimes",
+      "price": "913",
+      "category": "Ex nihil architecto ",
+      "color": "Omnis facilis veniam",
+      "description": "Eaque reiciendis mai",
+      "image": "https://picsum.photos/id/231/200/300"
+    },
+    {
+      "id": "7b56",
+      "name": "Kennedy Chase",
+      "price": "300",
+      "category": "Sint iure dicta aut ",
+      "color": "In fugiat dolores o",
+      "description": "Et facilis delectus",
+      "image": "https://picsum.photos/id/236/200/300"
+    },
+    {
+      "id": "0474",
+      "name": "Nomlanga Bush",
+      "price": "807",
+      "category": "Necessitatibus ex in",
+      "color": "Quod recusandae Rer",
+      "description": "Voluptas ex error mi",
+      "image": "https://picsum.photos/id/232/200/300"
+    },
+    {
+      "name": "Wendy Holt",
+      "price": "274",
+      "category": "Non sunt dolorum del",
+      "color": "Quia reprehenderit ",
+      "description": "Voluptates consequun",
+      "image": "https://picsum.photos/id/230/200/300",
+      "id": "6abe"
     }
   ]
 }
