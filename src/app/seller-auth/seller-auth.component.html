@@ -1,6 +1,3 @@
-<!-- In the below code, we have used template-driven approach to mange the overall form rather than two way data binding as we do with ngModel -->
-
-
 <div class="seller-auth">
   <div *ngIf="!showLogin" class="sign-up">
     <h1>Seller sign-up</h1>
@@ -27,20 +24,21 @@
         ngModel
       />
       <button class="form-button">Sign Up</button>
-      <a (click)="toggleLogin()" style="marginTop: 20px;">Already Have A Account? Click to Login</a>
+      <a class="auth-toggle-link" (click)="openLogin()">Already have account? Click for Login</a>
     </form>
   </div>
-  <div *ngIf="showLogin" class="sign-up">
-    <h1>Seller log-in</h1>
-    <p>{{authError}}</p>
-    <form #sellerLogIn="ngForm" (ngSubmit)="logIn(sellerLogIn.value)" class="common-form">
-        <input
-        type="text"
-        class="form-input"
-        placeholder="Enter Email"
-        name="email"
-        ngModel
-      />
+
+  <div *ngIf="showLogin" class="login">
+    <h1>Seller Login</h1>
+    <p class="error-p">{{authError}}</p>
+    <form #sellerLogin="ngForm" (ngSubmit)="login(sellerLogin.value)" class="common-form">
+      <input
+      type="text"
+      class="form-input"
+      placeholder="Enter Email"
+      name="email"
+      ngModel
+    />
       <input
         type="password"
         class="form-input"
@@ -48,9 +46,8 @@
         name="password"
         ngModel
       />
-      
-      <button class="form-button">Log In</button>
-      <a (click)="toggleLogin()" style="marginTop: 20px;">Don't Have A Account? Click to SignUp</a>
+      <button class="form-button">Login</button>
+      <a class="auth-toggle-link" (click)="openSignUp()">Don't have account? Click for sign-up</a>
 
     </form>
   </div>

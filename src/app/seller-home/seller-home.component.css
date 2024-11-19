@@ -3,12 +3,15 @@ table{
     color: blueviolet;
     border-collapse: collapse;
 }
- table td, table th{
+img{
+    height: 100px;
+    width: 100px;
+}
+table td , table th{
     border: 1px solid blueviolet;
     padding: 10px;
-    min-height: 160px;
- }
- img{
-    height: 100px;
-    height: 100px;
- }
+    min-width: 160pxs;
+}
+.adjust-update-link{
+    margin-left: 10px;
+}

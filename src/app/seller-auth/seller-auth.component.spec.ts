@@ -6,10 +6,12 @@ describe('SellerAuthComponent', () => {
   let component: SellerAuthComponent;
   let fixture: ComponentFixture<SellerAuthComponent>;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [SellerAuthComponent]
-    });
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [ SellerAuthComponent ]
+    })
+    .compileComponents();
+
     fixture = TestBed.createComponent(SellerAuthComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

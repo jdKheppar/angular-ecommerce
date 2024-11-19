@@ -1,33 +1,41 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { product } from '../data-type';
 import { ProductService } from '../services/product.service';
-import { Product } from '../data-type';
+import { faTrash, faEdit } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-seller-home',
   templateUrl: './seller-home.component.html',
-  styleUrls: ['./seller-home.component.css']
+  styleUrls: ['./seller-home.component.css'],
 })
-export class SellerHomeComponent {
-  productListArr: undefined | Product[];
+export class SellerHomeComponent implements OnInit {
+  productList: undefined | product[];
   productMessage: undefined | string;
-  constructor(private productService: ProductService) { }
-  fetchProducts(){
-    this.productService.productList().subscribe((data)=>{
-      
-      this.productListArr = data;
-    })
+  icon = faTrash;
+  iconEdit=faEdit;
+  constructor(private product: ProductService) {}
+
+  ngOnInit(): void {
+    this.list();
   }
-  ngOnInit(): void{
-    this.fetchProducts();
-  }
-  deleteProduct(id: number){
-    this.productService.deleteProduct(id).subscribe((result)=>{
-      if(result){
-        this.productMessage="Product deleted sucessfully";
-        this.fetchProducts();
+
+  deleteProduct(id: number) {
+    this.product.deleteProduct(id).subscribe((result) => {
+      if (result) {
+        this.productMessage = 'Product is deleted';
+
+        this.list();
       }
     });
-    setTimeout(()=>{
+    setTimeout(() => {
       this.productMessage = undefined;
     }, 3000);
-  } 
+  }
+
+  list() {
+    this.product.productList().subscribe((result) => {
+      if (result) {
+        this.productList = result;
+      }
+    });
+  }
 }
